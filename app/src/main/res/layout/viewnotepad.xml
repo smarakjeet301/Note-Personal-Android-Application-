@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+
+        >
+
+
+            <EditText
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Title"
+                android:paddingLeft="18dp"
+                android:backgroundTint="#ebebeb"
+                android:paddingRight="18dp"
+
+                >
+            </EditText>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <EditText
+                android:paddingLeft="18dp"
+                android:id="@+id/txtcontent"
+                android:hint="Your note here"
+                android:gravity="top|left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:backgroundTint="@color/colorPrimary"
+                android:inputType="textMultiLine">
+            </EditText>
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:layout_below="@+id/scrollView1"
+        android:id="@+id/back"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_margin="12dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:text="Back" />
+
+
+    <Button
+        android:layout_below="@+id/scrollView1"
+        android:id="@+id/submit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_margin="12dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:text="Save" />
+
+</LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabdelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="89dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/ic_delete_forever_black_24dp" />
+</RelativeLayout>
